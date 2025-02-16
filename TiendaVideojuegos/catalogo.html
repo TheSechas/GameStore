@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo - GameStore</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="icon" href="IMG/favicon.png">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <nav class="navbar">
+    <a href="index.html" class="logo">GameStore</a>
+    <div class="menu-hamburguesa" id="menu-hamburguesa">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+    </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Catálogo de Videojuegos</h2>
+    
+    <!-- Filtros de categorías -->
+    <div class="filtros">
+        <button class="btn-categoria" data-categoria="todos">Todos</button>
+        <button class="btn-categoria" data-categoria="accion">Acción</button>
+        <button class="btn-categoria" data-categoria="terror">Terror</button>
+        <button class="btn-categoria" data-categoria="free">Free to Play</button>
+        <button class="btn-categoria" data-categoria="multiplayer">Multiplayer</button>
+    </div>
+
+    <!-- Filtros por Consola -->
+    <div class="filtros">
+    <button class="btn-consola" data-consola="todas">Todas</button>
+    <button class="btn-consola" data-consola="playstation">PlayStation</button>
+    <button class="btn-consola" data-consola="xbox">Xbox</button>
+    <button class="btn-consola" data-consola="pc">PC</button>
+    <button class="btn-consola" data-consola="nintendo">Nintendo</button>
+    </div>
+
+    <!-- Listado de juegos -->
+    <div class="catalogo">
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, pc" data-id="1">
+        <a href="detalle-juego.html?id=1"><img src="IMG/u4.png" alt="Uncharted 4"></a>
+        <h3>Uncharted 4</h3>
+        <p>Juego de acción de Naughty Dog.</p>
+        <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="pc" data-id="2">
+        <a href="detalle-juego.html?id=2"><img src="IMG/twd.jpg" alt="The Walking Dead"></a>
+        <h3>The Walking Dead</h3>
+        <p>Juego de terror basado en la serie.</p>
+        <button onclick="agregarAlCarrito(2)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, multiplayer, free" data-plataforma="pc" data-id="3">
+        <a href="detalle-juego.html?id=3"><img src="IMG/cs2.jpg" alt="Counter Strike 2"></a>
+        <h3>Counter Strike 2</h3>
+        <p>Juego free to play de disparos.</p>
+        <button onclick="agregarAlCarrito(3)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="multiplayer, accion, free" data-plataforma="pc" data-id="4">
+        <a href="detalle-juego.html?id=4"><img src="IMG/mr.png" alt="Marvel Rivals"></a>
+        <h3>Marvel Rivals</h3>
+        <p>Juego multiplayer con mucha acción.</p>
+        <button onclick="agregarAlCarrito(4)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, free, multiplayer" data-plataforma="playstation, pc" data-id="5">
+        <a href="detalle-juego.html?id=5"><img src="IMG/v.jpg" alt="Valorant"></a>
+        <h3>Valorant</h3>
+        <p>Juego free to play con acción intensa.</p>
+        <button onclick="agregarAlCarrito(5)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, multiplayer" data-plataforma="pc, playstation, xbox, nintendo" data-id="6">
+        <a href="detalle-juego.html?id=6"></a><img src="IMG/rdr2.jpg" alt="Red Dead Redemption 2"></a>
+        <h3>Red Dead Redemption 2</h3>
+        <p>Juego de accion ambientado en el siglo XIX.</p>
+        <button onclick="agregarAlCarrito(6)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, pc" data-id="7">
+        <a href="detalle-juego.html?id=7"><img src="IMG/er.jpg" alt="Elden Ring"></a>
+        <h3>Elden Ring</h3>
+        <p>Juego de acción y aventura con elementos RPG.</p>
+        <button onclick="agregarAlCarrito(7)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror, accion" data-plataforma="pc" data-id="8">
+        <a href="detalle-juego.html?id=8"><img src="IMG/aw2.jpg" alt="Alan Wake 2"></a>
+        <h3>Alan Wake 2</h3>
+        <p>Juego de terror psicológico con narrativa intensa.</p>
+        <button onclick="agregarAlCarrito(8)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, terror" data-plataforma="playstation, pc" data-id="9">
+        <a href="detalle-juego.html?id=9"><img src="IMG/tlou.jpg" alt="The Last Of Us Parte 1"></a>
+        <h3>The Last Of Us Parte 1</h3>
+        <p>Juego de acción y supervivencia en un mundo post-apocalíptico.</p>
+        <button onclick="agregarAlCarrito(9)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="multiplayer, accion" data-plataforma="playstation" data-id="10">
+        <a href="detalle-juego.html?id=10"><img src="IMG/gta6.jpg" alt="Grand Theft Auto 6"></a>
+        <h3>Grand Theft Auto 6</h3>
+        <p>Juego de acción y mundo abierto con modo multiplayer.</p>
+        <button onclick="agregarAlCarrito(10)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="playstation, pc" data-id="11">
+        <a href="detalle-juego.html?id=11"><img src="IMG/sh2.jpg" alt="Silent Hill 2"></a>
+        <h3>Silent Hill 2</h3>
+        <p>Clásico juego de terror con atmósfera inquietante.</p>
+        <button onclick="agregarAlCarrito(11)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="pc, playstation" data-id="12">
+        <a href="detalle-juego.html?id=12"><img src="IMG/rev.png" alt="Resident Evil Village"></a>
+        <h3>Resident Evil Village</h3>
+        <p>Juego de terror y supervivencia en un entorno oscuro.</p>
+        <button onclick="agregarAlCarrito(12)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="playstation, pc" data-id="13">
+        <a href="detalle-juego.html?id=13"><img src="IMG/o.jpg" alt="Outlast"></a>
+        <h3>Outlast</h3>
+        <p>Juego de terror en primera persona con intensa atmósfera.</p>
+        <button onclick="agregarAlCarrito(13)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, pc" data-id="14">
+        <a href="detalle-juego.html?id=14"><img src="IMG/f4.png" alt="Fallout 4"></a>
+        <h3>Fallout 4</h3>
+        <p>Juego de acción y supervivencia post-apocalíptica.</p>
+        <button onclick="agregarAlCarrito(14)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="free" data-plataforma="playstation" data-id="15">
+        <a href="detalle-juego.html?id=15"><img src="IMG/ab.png" alt="Astro Bot"></a>
+        <h3>Astro Bot</h3>
+        <p>Juego free to play de plataformas y aventuras.</p>
+        <button onclick="agregarAlCarrito(15)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="pc" data-id="16">
+        <a href="detalle-juego.html?id=16"><img src="IMG/vis.jpg" alt="Visage"></a>
+        <h3>Visage</h3>
+        <p>Juego de terror psicológico con atmósfera opresiva.</p>
+        <button onclick="agregarAlCarrito(16)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, pc" data-id="17">
+        <a href="detalle-juego.html?id=17"><img src="IMG/tw3.jpg" alt="The Witcher 3"></a>
+        <h3>The Witcher 3</h3>
+        <p>Juego de acción y rol con un mundo abierto inmenso.</p>
+        <button onclick="agregarAlCarrito(17)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="nintendo" data-id="18">
+        <a href="detalle-juego.html?id=18"><img src="IMG/zbw.jpg" alt="The Zelda Breath Of The Wild"></a>
+        <h3>The Zelda Breath Of The Wild</h3>
+        <p>Juego de acción y aventura en un vasto mundo abierto.</p>
+        <button onclick="agregarAlCarrito(18)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="19">
+        <a href="detalle-juego.html?id=19"><img src="IMG/i.png" alt="Intergalatic The Heretic Prophet"></a>
+        <h3>Intergalatic The Heretic Prophet</h3>
+        <p>Juego de acción y ciencia ficción con narrativa única.</p>
+        <button onclick="agregarAlCarrito(19)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, pc" data-id="20">
+        <a href="detalle-juego.html?id=20"><img src="IMG/gow.png" alt="God Of War"></a>
+        <h3>God Of War</h3>
+        <p>Juego de acción y mitología con combates intensos.</p>
+        <button onclick="agregarAlCarrito(20)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="21">
+        <a href="detalle-juego.html?id=21"><img src="IMG/mgsd.png" alt="Metal Gear Solid Delta"></a>
+        <h3>Metal Gear Solid Delta</h3>
+        <p>Juego de sigilo y acción con gran estrategia.</p>
+        <button onclick="agregarAlCarrito(21)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="22">
+        <a href="detalle-juego.html?id=22"><img src="IMG/ds2.jpg" alt="Death Stranding 2"></a>
+        <h3>Death Stranding 2</h3>
+        <p>Juego de acción y aventura en un mundo post-apocalíptico.</p>
+        <button onclick="agregarAlCarrito(22)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="free, accion, multiplayer" data-plataforma="playstation, pc" data-id="23">
+        <a href="detalle-juego.html?id=23"><img src="IMG/apex.png" alt="Apex Legends"></a>
+        <h3>Apex Legends</h3>
+        <p>Juego free to play de battle royale con acción intensa.</p>
+        <button onclick="agregarAlCarrito(23)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation, xbox, pc" data-id="24">
+        <a href="detalle-juego.html?id=24"><img src="IMG/c77.jpg" alt="Cyberpunk 2077"></a>
+        <h3>Cyberpunk 2077</h3>
+        <p>Juego de acción y ciencia ficción en un futuro distópico.</p>
+        <button onclick="agregarAlCarrito(24)">Agregar al Carrito</button>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror, accion" data-plataforma="playstation, pc" data-id="25">
+        <a href="detalle-juego.html?id=25"><img src="IMG/dg.jpg" alt="Days Gone"></a>
+        <h3>Days Gone</h3>
+        <p>Juego de acción y supervivencia en un mundo post-apocalíptico.</p>
+        <button onclick="agregarAlCarrito(25)">Agregar al Carrito</button>
+    </article>    
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/main.js"></script>
+<script src="JS/filtrado.js"></script>
+<script src="JS/carrito.js"></script>
+</body>
+</html>
