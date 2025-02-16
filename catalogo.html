@@ -2,7 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta los productos de tu carrito en GameStore y finaliza tu compra.">
+    <meta name="keywords" content="GameStore, carrito de compras, videojuegos, tienda gaming">
+    <meta name="author" content="GameStore Team">
+
     <title>Catálogo - GameStore</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/estilos.css">
     <link rel="icon" href="IMG/favicon.png">
 </head>
@@ -25,13 +32,13 @@
     </ul>
     </nav>
 </header>
-
+<br>
+<br> 
 <main>
     <h2>Catálogo de Videojuegos</h2>
     
     <!-- Filtros de categorías -->
     <div class="filtros">
-        <button class="btn-categoria" data-categoria="todos">Todos</button>
         <button class="btn-categoria" data-categoria="accion">Acción</button>
         <button class="btn-categoria" data-categoria="terror">Terror</button>
         <button class="btn-categoria" data-categoria="free">Free to Play</button>
@@ -40,7 +47,6 @@
 
     <!-- Filtros por Consola -->
     <div class="filtros">
-    <button class="btn-consola" data-consola="todas">Todas</button>
     <button class="btn-consola" data-consola="playstation">PlayStation</button>
     <button class="btn-consola" data-consola="xbox">Xbox</button>
     <button class="btn-consola" data-consola="pc">PC</button>
@@ -80,7 +86,7 @@
         <button onclick="agregarAlCarrito(5)">Agregar al Carrito</button>
     </article>
     <article class="tarjeta-juego" data-categoria="accion, multiplayer" data-plataforma="pc, playstation, xbox, nintendo" data-id="6">
-        <a href="detalle-juego.html?id=6"></a><img src="IMG/rdr2.jpg" alt="Red Dead Redemption 2"></a>
+        <a href="detalle-juego.html?id=6"><img src="IMG/rdr2.jpg" alt="Red Dead Redemption 2"></a>
         <h3>Red Dead Redemption 2</h3>
         <p>Juego de accion ambientado en el siglo XIX.</p>
         <button onclick="agregarAlCarrito(6)">Agregar al Carrito</button>
@@ -203,7 +209,28 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>GameStore</h2>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Juegos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="sobre.html">Sobre Nosotros</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="footer-copy">&copy; 2025 GameZone - Todos los derechos reservados</p>
+    </div>
 </footer>
 
 <script src="JS/main.js"></script>

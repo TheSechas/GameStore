@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="GameStore - Tu tienda de videojuegos favorita con los últimos títulos y ofertas.">
-        <meta name="keywords" content="videojuegos, tienda, gaming, PS5, PC, Xbox">
-        <meta name="author" content="GameStore Team">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameStore - Tu tienda de videojuegos favorita con los últimos títulos y ofertas.">
+    <meta name="keywords" content="videojuegos, tienda, gaming, PS5, PC, Xbox">
+    <meta name="author" content="GameStore Team">
     
-        <title>Tienda de Videojuegos - GameStore</title>
-    
-        <link rel="stylesheet" href="CSS/estilos.css">
-        <link rel="icon" href="IMG/favicon.png" type="image/png">
-    </head>
+    <title>Tienda de Videojuegos - GameStore</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="icon" href="IMG/favicon.png" type="image/png">
+</head>
 <body>
 <!-- Header y menú -->
 <header>
@@ -31,7 +32,6 @@
     </ul>
     </nav>
 </header>
-
 <!-- Slider -->
 <section class="slider">
     <div class="slide active">
@@ -56,6 +56,7 @@
 <!-- Juegos Destacados -->
 <main>
     <h2>Juegos Destacados</h2>
+    <br>
     <div class="destacados">
     <!-- Ejemplo de tarjeta de juego -->
     <article class="tarjeta-juego" data-categoria="accion, terror" data-plataforma="playstation, pc" data-id="9">
@@ -92,7 +93,6 @@
 
 <!-- Filtros de categorías -->
     <div class="filtros">
-        <button class="btn-categoria" data-categoria="todos">Todos</button>
         <button class="btn-categoria" data-categoria="accion">Acción</button>
         <button class="btn-categoria" data-categoria="terror">Terror</button>
         <button class="btn-categoria" data-categoria="free">Free</button>
@@ -101,22 +101,99 @@
 
     <!-- Filtros de plataformas (opcional) -->
     <div class="filtros">
-        <button class="btn-consola" data-consola="todas">Todas</button>
         <button class="btn-consola" data-consola="playstation">PlayStation</button>
         <button class="btn-consola" data-consola="xbox">Xbox</button>
         <button class="btn-consola" data-consola="pc">PC</button>
         <button class="btn-consola" data-consola="nintendo">Nintendo</button>
     </div>
+
+    <h2>Juegos en Oferta</h2>
+    <div class="carrusel">
+        <div class="carrusel-contenedor">
+            <div class="carrusel-item">
+                <img src="IMG/gow.png" alt="Oferta 1">
+                <div class="carrusel-texto">
+                    <h3>God Of War</h3>
+                    <p>$20 de descuento</p>
+                    <a href="detalle-juego.html?id=20"><button>Ver Oferta</button></a>
+                </div>
+            </div>
+            <div class="carrusel-item">
+                <img src="IMG/apex.png" alt="Oferta 2">
+                <div class="carrusel-texto">
+                    <h3>Apex Legends</h3>
+                    <p>Campeones GRATIS</p>
+                    <a href="detalle-juego.html?id=23"><button>Ver Oferta</button></a>
+                </div>
+            </div>
+            <div class="carrusel-item">
+                <img src="IMG/mgsd.png" alt="Oferta 3">
+                <div class="carrusel-texto">
+                    <h3>Metal Gear Solid Delta</h3>
+                    <p>10% de descuento</p>
+                    <a href="detalle-juego.html?id=21"><button>Ver Oferta</button></a>
+                </div>
+            </div>
+        </div>
+        <!-- Controles de navegación -->
+        <button class="carrusel-prev" aria-label="Anterior">&#10094;</button>
+        <button class="carrusel-next" aria-label="Siguiente">&#10095;</button>
+    </div>    
 </main>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>GameStore</h2>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Juegos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="sobre.html">Sobre Nosotros</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p class="footer-copy">&copy; 2025 GameZone - Todos los derechos reservados</p>
+    </div>
 </footer>
+
 
 <!-- Inclusión de scripts -->
     <script src="JS/main.js"></script>
     <script src="JS/slider.js"></script>
     <script src="JS/filtrado.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carruselContenedor = document.querySelector('.carrusel-contenedor');
+            const items = document.querySelectorAll('.carrusel-item');
+            const totalItems = items.length;
+            let indice = 0;
+    
+            document.querySelector('.carrusel-next').addEventListener('click', () => {
+                indice = (indice + 1) % totalItems;
+                actualizarCarrusel();
+            });
+    
+            document.querySelector('.carrusel-prev').addEventListener('click', () => {
+                indice = (indice - 1 + totalItems) % totalItems;
+                actualizarCarrusel();
+            });
+    
+            function actualizarCarrusel() {
+                carruselContenedor.style.transform = `translateX(-${indice * 100}%)`;
+            }
+        });
+    </script>
+    
 </body>
 </html>

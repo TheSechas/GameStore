@@ -1,5 +1,5 @@
 /* estilos.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');   
 
 
 
@@ -37,6 +37,32 @@ header {
     text-decoration: none;
 }
 
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background: #ff9800;
+    border-radius: 5px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -44,16 +70,6 @@ header {
 
 .nav-links li {
     margin: 0 10px;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #f0a500;
 }
 
   /* Menú hamburguesa (móvil) */
@@ -123,10 +139,86 @@ header {
     right: 10px;
 }
 
+.carrusel {
+    position: relative;
+    justify-content: center;
+    max-width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carrusel-item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carrusel-texto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carrusel-prev, .carrusel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carrusel-prev {
+    left: 10px;
+}
+
+.carrusel-next {
+    right: 10px;
+}
+
+.carrusel-prev:hover, .carrusel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
   /* Contenido principal */
 main {
     padding: 20px;
 }
+
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
 
   /* Tarjetas de juego (usadas en index, catálogo, etc.) */
 .destacados, .catalogo {
@@ -138,7 +230,7 @@ main {
 }
 
 .tarjeta-juego {
-    background: #fff;
+    background: #c4c4c4;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -224,6 +316,10 @@ main {
     color: white;
 }
 
+.filtros .btn-consola {
+    margin-top: -25px;
+}
+
   /* Página de detalle del juego */
 .detalle-juego {
     display: flex;
@@ -271,6 +367,54 @@ main {
     line-height: 1.5;
 }
 
+.trailer-container {
+    flex: 2;
+    margin: 20px auto;
+    max-width: 800px; /* Ajusta el tamaño máximo */
+    padding: 10px;
+    background: #111; /* Fondo oscuro para contraste */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.trailer-container iframe {
+    width: 100%;
+    height: 450px; /* Altura más grande */
+    border-radius: 10px;
+    border: none;
+}
+
+.calificacion {
+    text-align: center;
+    margin-top: 20px;
+}
+.estrellas i {
+    font-size: 2em;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+.estrellas i.seleccionada {
+    color: gold;
+}
+.puntuacion-metacritic {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+.score {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/*.trailer-star {
+    display: flex;
+}
+
+.trailer-star section {
+    margin-top: 200px;
+}
+
 /* Estilos para elementos del carrito */
 .carrito button {
     margin: 10px;
@@ -315,6 +459,7 @@ form {
     max-width: 750px;
     margin-top: 50px;
     margin-left: 550px;
+    margin-bottom: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 15px;
@@ -353,11 +498,62 @@ form button[type="submit"]:hover {
 
   /* Footer */
 footer {
-    background: #222;
-    color: #fff;
+    background: #111;
+    color: white;
+    padding: 40px 20px;
     text-align: center;
-    padding: 15px 20px;
-    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: #ff9800;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
   /* Responsive */
@@ -385,4 +581,11 @@ footer {
     flex-direction: column;
     align-items: center;
     }
-}  
+} 
+
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

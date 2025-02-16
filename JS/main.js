@@ -22,7 +22,9 @@ const juegos = {
         categoria: "Acción, Aventura", 
         descripcion: "Uncharted 4 es un juego de aventura y acción donde Nathan Drake explora peligrosos entornos en busca de tesoros perdidos.", 
         plataformas: "PlayStation 4, PC",
-        trailer: "https://www.youtube.com/watch?v=34GJ9ZMAKqA"
+        trailer: "https://www.youtube.com/embed/34GJ9ZMAKqA",
+        metacritic: 93,
+        fechaLanzamiento: "10 de mayo de 2016"
     },
     2: { 
         id: 2, 
@@ -31,7 +33,10 @@ const juegos = {
         precio: 14.99, 
         categoria: "Terror, Aventura", 
         descripcion: "Basado en la famosa serie de TV, The Walking Dead te pone en el papel de sobreviviente en un mundo lleno de zombis.", 
-        plataformas: "PC"
+        plataformas: "PC",
+        trailer: "https://www.youtube.com/embed/N40uY51s5Z0",
+        metacritic: 94,
+        fechaLanzamiento: "24 de abril de 2012"
     },
     3: { 
         id: 3, 
@@ -40,7 +45,10 @@ const juegos = {
         precio: 0.00, 
         categoria: "Táctico, Multijugador", 
         descripcion: "Counter Strike 2 es un juego de disparos en primera persona competitivo con un enfoque en el trabajo en equipo.", 
-        plataformas: "PC"
+        plataformas: "PC",
+        trailer: "https://www.youtube.com/embed/c80dVYcL69E",
+        metacritic: 88,
+        fechaLanzamiento: "27 de septiembre de 2023"
     },
     4: { 
         id: 4, 
@@ -49,7 +57,10 @@ const juegos = {
         precio: 0.00, 
         categoria: "Lucha, Acción", 
         descripcion: "Marvel Rivals es un juego de lucha basado en los superhéroes de Marvel, donde puedes controlar a tus personajes favoritos.", 
-        plataformas: "PlayStation 5, Xbox"
+        plataformas: "PlayStation 5, Xbox",
+        trailer: "https://www.youtube.com/embed/FFWzIbkXxBU",
+        metacritic: 85,
+        fechaLanzamiento: "6 de diciembre de 2024"
     },
     5: { 
         id: 5, 
@@ -58,7 +69,10 @@ const juegos = {
         precio: 0.00, 
         categoria: "Táctico, Multijugador", 
         descripcion: "Valorant es un juego de disparos táctico de 5v5 en el que cada jugador elige un 'agente' con habilidades únicas.", 
-        plataformas: "PC"
+        plataformas: "PC",
+        trailer: "https://www.youtube.com/embed/Iyd2VUcoTBY",
+        metacritic: 80,
+        fechaLanzamiento: "2 de junio de 2020"
     },
     6: { 
         id: 6, 
@@ -67,7 +81,10 @@ const juegos = {
         precio: 59.99, 
         categoria: "Aventura, Mundo Abierto", 
         descripcion: "Red Dead Redemption 2 es un juego de acción y aventura de mundo abierto ambientado en el salvaje oeste estadounidense.", 
-        plataformas: "PlayStation 4, Xbox One, PC"
+        plataformas: "PlayStation 4, Xbox One, PC",
+        trailer: "https://www.youtube.com/embed/gmA6MrX81z4",
+        metacritic: 97,
+        fechaLanzamiento: "26 de octubre de 2018"
     },
     7: { 
         id: 7, 
@@ -76,7 +93,10 @@ const juegos = {
         precio: 34.99, 
         categoria: "RPG, Acción", 
         descripcion: "Elden Ring es un RPG de acción ambientado en un mundo fantástico, creado por los autores de Dark Souls y George R. R. Martin.", 
-        plataformas: "PlayStation 5, Xbox Series X/S, PC"
+        plataformas: "PlayStation 5, Xbox Series X/S, PC",
+        trailer: "https://www.youtube.com/embed/CptaXqVY6-E",
+        metacritic: 96,
+        fechaLanzamiento: "25 de febrero de 2022"
     },
     8: { 
         id: 8, 
@@ -85,7 +105,10 @@ const juegos = {
         precio: 44.99, 
         categoria: "Terror Psicológico, Aventura", 
         descripcion: "Alan Wake 2 es un juego de terror psicológico en el que los jugadores controlan a un escritor atrapado en una realidad distorsionada.", 
-        plataformas: "PlayStation 5, PC"
+        plataformas: "PlayStation 5, PC",
+        trailer: "https://www.youtube.com/embed/q0vNoRhuV_I",
+        metacritic: 88,
+        fechaLanzamiento: "27 de octubre de 2023"
     },
     9: { 
         id: 9, 
@@ -94,7 +117,10 @@ const juegos = {
         precio: 69.99, 
         categoria: "Aventura, Acción", 
         descripcion: "The Last Of Us Parte 1 es un juego de acción y aventura en un mundo post-apocalíptico donde debes sobrevivir mientras desarrollas una relación profunda con los personajes.", 
-        plataformas: "PlayStation 5, PC"
+        plataformas: "PlayStation 5, PC",
+        trailer: "https://www.youtube.com/embed/Mel8DZBEJTo",
+        metacritic: 95,
+        fechaLanzamiento: "14 de junio de 2013"
     },
     10: { 
         id: 10, 
@@ -103,7 +129,10 @@ const juegos = {
         precio: 99.99, 
         categoria: "Acción, Mundo Abierto", 
         descripcion: "Grand Theft Auto 6 es un juego de acción en un mundo abierto donde puedes realizar misiones, explorar ciudades y participar en actividades criminales.", 
-        plataformas: "PlayStation 5, Xbox Series X/S, PC"
+        plataformas: "PlayStation 5, Xbox Series X/S, PC",
+        trailer: "https://www.youtube.com/embed/QdBZY2fkU-0",
+        metacritic: 99,
+        fechaLanzamiento: "Otoño 2025"
     },
     11: { 
         id: 11, 
@@ -112,7 +141,10 @@ const juegos = {
         precio: 69.99, 
         categoria: "Terror Psicológico", 
         descripcion: "Silent Hill 2 es un juego de terror psicológico en un pueblo donde la oscuridad y las criaturas extrañas acechan a los jugadores.", 
-        plataformas: "PlayStation 2, PC"
+        plataformas: "PlayStation 2, PC",
+        trailer: "https://www.youtube.com/embed/pyC_qiW_4ZY",
+        metacritic: 86,
+        fechaLanzamiento: "7 de octubre 2024"
     },
     12: { 
         id: 12, 
@@ -121,7 +153,10 @@ const juegos = {
         precio: 39.99, 
         categoria: "Terror, Acción", 
         descripcion: "Resident Evil Village continúa la historia de Ethan Winters mientras se enfrenta a nuevas amenazas en un extraño y aterrador pueblo.", 
-        plataformas: "PlayStation 5, Xbox Series X/S, PC"
+        plataformas: "PlayStation 5, Xbox Series X/S, PC",
+        trailer: "https://www.youtube.com/embed/ztj8fv6Ttp8",
+        metacritic: 84,
+        fechaLanzamiento: "7 de mayo de 2021"
     },
     13: { 
         id: 13, 
@@ -130,7 +165,10 @@ const juegos = {
         precio: 19.99, 
         categoria: "Terror, Survival", 
         descripcion: "Outlast es un juego de terror de supervivencia en el que te enfrentas a criaturas aterradoras dentro de un hospital psiquiátrico.", 
-        plataformas: "PlayStation 4, Xbox One, PC"
+        plataformas: "PlayStation 4, Xbox One, PC",
+        trailer: "https://www.youtube.com/embed/uKA-IA4locM",
+        metacritic: 80,
+        fechaLanzamiento: "4 de septiembre de 2013"
     },
     14: { 
         id: 14, 
@@ -139,7 +177,10 @@ const juegos = {
         precio: 29.99, 
         categoria: "RPG, Mundo Abierto", 
         descripcion: "Fallout 4 es un RPG de mundo abierto donde los jugadores exploran un mundo post-apocalíptico lleno de criaturas mutantes y misterios.", 
-        plataformas: "PlayStation 4, Xbox One, PC"
+        plataformas: "PlayStation 4, Xbox One, PC",
+        trailer: "https://www.youtube.com/embed/X5aJfebzkrM",
+        metacritic: 95,
+        fechaLanzamiento: "14 de junio de 2013"
     },
     15: { 
         id: 15, 
@@ -148,7 +189,10 @@ const juegos = {
         precio: 0.00, 
         categoria: "Aventura, Familia", 
         descripcion: "Astro Bot es un juego de aventuras donde un pequeño robot explora mundos coloridos y resuelve rompecabezas.", 
-        plataformas: "PlayStation VR"
+        plataformas: "PlayStation VR",
+        trailer: "https://www.youtube.com/embed/gdHIbPiQEQI",
+        metacritic: 94,
+        fechaLanzamiento: "5 de septiembre de 2024"
     },
     16: { 
         id: 16, 
@@ -157,7 +201,10 @@ const juegos = {
         precio: 24.99, 
         categoria: "Terror Psicológico", 
         descripcion: "Visage es un juego de terror psicológico que se desarrolla en una casa misteriosa, llena de secretos oscuros y horrores inexplicables.", 
-        plataformas: "PC, PlayStation 4, Xbox One"
+        plataformas: "PC, PlayStation 4, Xbox One",
+        trailer: "https://www.youtube.com/embed/dY8AVTFbR9o",
+        metacritic: 81,
+        fechaLanzamiento: "30 de octubre de 2020"
     },
     17: { 
         id: 17, 
@@ -166,7 +213,10 @@ const juegos = {
         precio: 29.99, 
         categoria: "RPG, Aventura", 
         descripcion: "The Witcher 3 es un RPG de mundo abierto en el que Geralt de Rivia busca a su hija adoptiva en un mundo plagado de monstruos y magia.", 
-        plataformas: "PlayStation 4, Xbox One, PC"
+        plataformas: "PlayStation 4, Xbox One, PC",
+        trailer: "https://www.youtube.com/embed/c0i88t0Kacs",
+        metacritic: 93,
+        fechaLanzamiento: "19 de mayo de 2015"
     },
     18: { 
         id: 18, 
@@ -175,7 +225,10 @@ const juegos = {
         precio: 49.99, 
         categoria: "Aventura, Mundo Abierto", 
         descripcion: "The Legend of Zelda: Breath of the Wild es un juego de aventuras en un mundo abierto donde exploras y resuelves acertijos mientras enfrentas a peligros y enemigos.", 
-        plataformas: "Nintendo Switch"
+        plataformas: "Nintendo Switch",
+        trailer: "https://www.youtube.com/embed/zw47_q9wbBE",
+        metacritic: 97,
+        fechaLanzamiento: "3 de marzo de 2017"
     },
     19: { 
         id: 19, 
@@ -184,7 +237,10 @@ const juegos = {
         precio: 39.99, 
         categoria: "RPG, Ciencia Ficción", 
         descripcion: "Intergalatic The Heretic Prophet es un RPG de ciencia ficción donde viajas por galaxias lejanas en busca de conocimiento y poder.", 
-        plataformas: "PC"
+        plataformas: "PC",
+        trailer: "https://www.youtube.com/embed/o7TVPoxwi74",
+        metacritic: 99,
+        fechaLanzamiento: "2028"
     },
     20: { 
         id: 20, 
@@ -193,7 +249,10 @@ const juegos = {
         precio: 39.99, 
         categoria: "Acción, Aventura", 
         descripcion: "God of War es un juego de acción que sigue a Kratos mientras navega en el mundo de la mitología nórdica en busca de venganza y redención.", 
-        plataformas: "PlayStation 4, PC"
+        plataformas: "PlayStation 4, PC",
+        trailer: "https://www.youtube.com/embed/dK42JGgkoF8",
+        metacritic: 94,
+        fechaLanzamiento: "	20 de abril de 2018"
     },
     21: { 
         id: 21, 
@@ -202,7 +261,10 @@ const juegos = {
         precio: 59.99, 
         categoria: "Acción, Sigilo", 
         descripcion: "Metal Gear Solid Delta es un juego de sigilo en el que el jugador toma el control de Snake para desbaratar planes de guerra global.", 
-        plataformas: "PlayStation 5, PC"
+        plataformas: "PlayStation 5, PC",
+        trailer: "https://www.youtube.com/embed/iNX8QCeymFM",
+        metacritic: 99,
+        fechaLanzamiento: "28 de agosto de 2025"
     },
     22: { 
         id: 22, 
@@ -211,7 +273,10 @@ const juegos = {
         precio: 59.99, 
         categoria: "Aventura, Ciencia Ficción", 
         descripcion: "Death Stranding 2 es un juego de aventura y ciencia ficción que explora el aislamiento y la reconexión en un mundo devastado.", 
-        plataformas: "PlayStation 5"
+        plataformas: "PlayStation 5",
+        trailer: "https://www.youtube.com/embed/wbLstJHlC4U",
+        metacritic: 99,
+        fechaLanzamiento: "2025"
     },
     23: { 
         id: 23, 
@@ -220,7 +285,10 @@ const juegos = {
         precio: 0.00, 
         categoria: "Battle Royale, Multijugador", 
         descripcion: "Apex Legends es un juego battle royale gratuito en el que equipos de jugadores luchan por ser los últimos en pie.", 
-        plataformas: "PC, PlayStation 4, Xbox One"
+        plataformas: "PC, PlayStation 4, Xbox One",
+        trailer: "https://www.youtube.com/embed/oQtHENM_GZU",
+        metacritic: 88,
+        fechaLanzamiento: "4 de febrero de 2019"
     },
     24: { 
         id: 24, 
@@ -229,7 +297,10 @@ const juegos = {
         precio: 49.99, 
         categoria: "RPG, Mundo Abierto", 
         descripcion: "Cyberpunk 2077 es un RPG de mundo abierto donde te sumerges en un futuro distópico, explorando las calles de Night City.", 
-        plataformas: "PlayStation 4, Xbox One, PC"
+        plataformas: "PlayStation 4, Xbox One, PC",
+        trailer: "https://www.youtube.com/embed/8X2kIfS6fb8",
+        metacritic: 86,
+        fechaLanzamiento: "10 de diciembre de 2020"
     },
     25: { 
         id: 25, 
@@ -238,7 +309,10 @@ const juegos = {
         precio: 29.99, 
         categoria: "Acción, Aventura", 
         descripcion: "Days Gone es un juego de acción y aventura en un mundo post-apocalíptico lleno de zombis, donde un motociclista trata de sobrevivir.", 
-        plataformas: "PlayStation 4, PC"
+        plataformas: "PlayStation 4, PC",
+        trailer: "https://www.youtube.com/embed/FKtaOY9lMvM",
+        metacritic: 71,
+        fechaLanzamiento: "26 de abril de 2019"
     }
 };
 
@@ -257,6 +331,7 @@ function cargarDetalleJuego(id) {
         document.getElementById('plataformas-juego').textContent = juego.plataformas;
         document.getElementById('precio-juego').textContent = `$${juego.precio.toFixed(2)}`; // Añadir formato al precio
         document.getElementById('descripcion-juego').textContent = juego.descripcion;
+        document.getElementById('fecha-lanzamiento').textContent = juego.fechaLanzamiento;
                 // Actualizar el contenedor del tráiler
                 if(juego.trailer) {
                     document.getElementById('trailer-juego').innerHTML = `
