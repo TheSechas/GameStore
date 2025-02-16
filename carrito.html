@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta los productos de tu carrito en GameStore y finaliza tu compra.">
+    <meta name="keywords" content="GameStore, carrito de compras, videojuegos, tienda gaming">
+    <meta name="author" content="GameStore Team">
+    
+    <title>Carrito - GameStore</title>
+    
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="icon" href="IMG/favicon.png" type="image/png">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar" aria-label="Menú principal">
+        <a href="index.html" class="logo">GameStore</a>
+        
+        <div class="menu-hamburguesa" id="menu-hamburguesa" aria-label="Menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carrito.html" class="active">Carrito</a></li>
+            <li><a href="sobre.html">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="carrito">
+        <h1>Tu Carrito</h1>
+        <div id="contenido-carrito" class="carrito-contenedor"></div>
+        
+        <div class="botones-carrito">
+            <button id="vaciar-carrito" class="btn">Vaciar Carrito</button>
+            <button id="finalizar-compra" class="btn btn-comprar">Finalizar Compra</button>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="JS/main.js"></script>
+<script src="JS/carrito.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Obtener el botón de "Finalizar Compra"
+        const btnFinalizarCompra = document.getElementById('finalizar-compra');
+
+        // Añadir el evento de clic al botón
+        btnFinalizarCompra.addEventListener("click", () => {
+            // Aquí se puede mostrar el mensaje de "Compra Finalizada"
+            alert("Compra Finalizada");
+
+            // Opcionalmente, redirigir al usuario a otra página después de la compra (por ejemplo, página de inicio)
+            // window.location.href = "index.html"; // Redirige al inicio
+        });
+
+        // Funcionalidad de vaciar carrito
+        document.getElementById("vaciar-carrito").addEventListener("click", () => {
+            localStorage.removeItem("carrito");
+            mostrarCarrito();
+        });
+    });
+</script>
+</body>
+</html>

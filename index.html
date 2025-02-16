@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="GameStore - Tu tienda de videojuegos favorita con los últimos títulos y ofertas.">
+        <meta name="keywords" content="videojuegos, tienda, gaming, PS5, PC, Xbox">
+        <meta name="author" content="GameStore Team">
+    
+        <title>Tienda de Videojuegos - GameStore</title>
+    
+        <link rel="stylesheet" href="CSS/estilos.css">
+        <link rel="icon" href="IMG/favicon.png" type="image/png">
+    </head>
+<body>
+<!-- Header y menú -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">GameStore</a>
+    <div class="menu-hamburguesa" id="menu-hamburguesa">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+    </ul>
+    </nav>
+</header>
+
+<!-- Slider -->
+<section class="slider">
+    <div class="slide active">
+        <img src="IMG/tlou.jpg" alt="Juego 1">
+    </div>
+    <div class="slide">
+        <img src="IMG/slider1.jpg" alt="Juego 2">
+    </div>
+    <div class="slide">
+        <img src="IMG/sh2.jpg" alt="Juego 3">
+    </div>
+    <div class="slide">
+        <img src="IMG/slider2.jpg" alt="Juego 4">
+    </div>
+    <div class="slide">
+        <img src="IMG/rdr2.jpg" alt="Juego 5">
+    </div>
+    <button class="prev" id="prev">&#10094;</button>
+    <button class="next" id="next">&#10095;</button>
+</section>
+
+<!-- Juegos Destacados -->
+<main>
+    <h2>Juegos Destacados</h2>
+    <div class="destacados">
+    <!-- Ejemplo de tarjeta de juego -->
+    <article class="tarjeta-juego" data-categoria="accion, terror" data-plataforma="playstation, pc" data-id="9">
+        <a href="detalle-juego.html?id=9"><img src="IMG/tlou.jpg" alt="The Last Of Us Parte 1"></a>
+        <h3>The Last Of Us Parte 1</h3>
+        <p>Juego de acción y supervivencia en un mundo post-apocalíptico.</p>
+        <a href="detalle-juego.html?id=9"><button>Ver Más</button></a>
+    </article>    
+    <article class="tarjeta-juego" data-categoria="multiplayer, accion" data-plataforma="playstation, xbox" data-id="10">
+        <a href="detalle-juego.html?id=10"><img src="IMG/gta6.jpg" alt="Grand Theft Auto 6"></a>
+        <h3>Grand Theft Auto 6</h3>
+        <p>Juego de acción y mundo abierto con modo multiplayer.</p>
+        <a href="detalle-juego.html?id=10"><button>Ver Más</button></a>
+    </article>
+    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="playstation, pc" data-id="11">
+        <a href="detalle-juego.html?id=11"><img src="IMG/sh2.jpg" alt="Silent Hill 2"></a>
+        <h3>Silent Hill 2</h3>
+        <p>Clásico juego de terror con atmósfera inquietante.</p>
+        <a href="detalle-juego.html?id=11"><button>Ver Más</button></a>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, multiplayer, free" data-plataforma="pc" data-id="3">
+        <a href="detalle-juego.html?id=3"><img src="IMG/cs2.jpg" alt="Counter Strike 2"></a>
+        <h3>Counter Strike 2</h3>
+        <p>Juego free to play de disparos.</p>
+        <a href="detalle-juego.html?id=3"><button>Ver Más</button></a>
+    </article>
+    <article class="tarjeta-juego" data-categoria="accion, multiplayer" data-plataforma="playstation, pc, xbox, nintendo" data-id="6">
+        <a href="detalle-juego.html?id=6"><img src="IMG/rdr2.jpg" alt="Red Dead Redemption 2"></a>
+        <h3>Red Dead Redemption 2</h3>
+        <p>Juego de accion ambientado en el siglo XIX.</p>
+        <a href="detalle-juego.html?id=6"><button>Ver Más</button></a>
+    </article>
+    </div>
+
+<!-- Filtros de categorías -->
+    <div class="filtros">
+        <button class="btn-categoria" data-categoria="todos">Todos</button>
+        <button class="btn-categoria" data-categoria="accion">Acción</button>
+        <button class="btn-categoria" data-categoria="terror">Terror</button>
+        <button class="btn-categoria" data-categoria="free">Free</button>
+        <button class="btn-categoria" data-categoria="multiplayer">Multiplayer</button>
+    </div>
+
+    <!-- Filtros de plataformas (opcional) -->
+    <div class="filtros">
+        <button class="btn-consola" data-consola="todas">Todas</button>
+        <button class="btn-consola" data-consola="playstation">PlayStation</button>
+        <button class="btn-consola" data-consola="xbox">Xbox</button>
+        <button class="btn-consola" data-consola="pc">PC</button>
+        <button class="btn-consola" data-consola="nintendo">Nintendo</button>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Inclusión de scripts -->
+    <script src="JS/main.js"></script>
+    <script src="JS/slider.js"></script>
+    <script src="JS/filtrado.js"></script>
+</body>
+</html>
