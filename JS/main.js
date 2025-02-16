@@ -346,7 +346,13 @@ function cargarDetalleJuego(id) {
                 } else {
                     document.getElementById('trailer-juego').innerHTML = '<p>Tráiler no disponible.</p>';
                 }
-
+                     // Actualizar la puntuación de Metacritic
+        const metacriticScoreElement = document.getElementById('metacritic-score');
+        if (juego.metacritic) {
+            metacriticScoreElement.innerHTML = `<span class='score'>${juego.metacritic}</span>/100`;
+        } else {
+            metacriticScoreElement.textContent = 'Puntuación no disponible';
+        }
         // Cambiar la lógica del botón "Agregar al Carrito"
         const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
         if (btnAgregarCarrito) {
