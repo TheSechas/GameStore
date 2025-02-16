@@ -21,7 +21,8 @@ const juegos = {
         precio: 49.99, 
         categoria: "Acción, Aventura", 
         descripcion: "Uncharted 4 es un juego de aventura y acción donde Nathan Drake explora peligrosos entornos en busca de tesoros perdidos.", 
-        plataformas: "PlayStation 4, PC"
+        plataformas: "PlayStation 4, PC",
+        trailer: "https://www.youtube.com/watch?v=34GJ9ZMAKqA"
     },
     2: { 
         id: 2, 
@@ -256,6 +257,20 @@ function cargarDetalleJuego(id) {
         document.getElementById('plataformas-juego').textContent = juego.plataformas;
         document.getElementById('precio-juego').textContent = `$${juego.precio.toFixed(2)}`; // Añadir formato al precio
         document.getElementById('descripcion-juego').textContent = juego.descripcion;
+                // Actualizar el contenedor del tráiler
+                if(juego.trailer) {
+                    document.getElementById('trailer-juego').innerHTML = `
+                        <iframe width="560" height="315" src="${juego.trailer}" 
+                            title="Tráiler de ${juego.nombre}" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; 
+                            encrypted-media; gyroscope; picture-in-picture; 
+                            web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                            </iframe>
+                    `;
+                } else {
+                    document.getElementById('trailer-juego').innerHTML = '<p>Tráiler no disponible.</p>';
+                }
 
         // Cambiar la lógica del botón "Agregar al Carrito"
         const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
