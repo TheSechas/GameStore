@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         
-        // Obtener las plataformas seleccionadas (si se implementa)
+        // Obtener las plataformas seleccionadas
         btnsPlataforma.forEach(btn => {
             if (btn.classList.contains('activo')) {
                 plataformasSeleccionadas.push(btn.dataset.consola.toLowerCase());
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Hacer clic en los botones de plataforma (si se agregan)
+    // Hacer clic en los botones de plataforma
     btnsPlataforma.forEach(btn => {
         btn.addEventListener('click', () => {
             // Alternar la clase 'activo' en el botón
