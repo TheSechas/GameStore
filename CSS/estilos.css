@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* estilos.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');   
 
@@ -594,4 +595,911 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+=======
+/* estilos.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');   
+
+
+
+/* Reset básico y configuraciones generales */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+  /* Header y navegación */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background: #ff9800;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+  /* Estilo para el ícono y texto de usuario */
+.user-logo {
+    display: flex;
+    align-items: center;
+}
+
+.user-logo i {
+    font-size: 2rem;
+    margin-right: 5px;
+    color: #fff;
+}
+
+/* Estilo para el inicio sesion*/
+#login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa la altura total de la ventana */
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span {
+    font-size: 12px;
+}
+
+.container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button {
+    background-color:#000000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #ff9800;
+    height: 100%;
+    background: linear-gradient(to right, #f3c278, #ff9800);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+  /* Menú hamburguesa (móvil) */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguesa span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
+
+
+  /* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative; /* Opcional: para que el slide activo se posicione de forma normal */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carrusel {
+    position: relative;
+    justify-content: center;
+    max-width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carrusel-item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carrusel-texto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carrusel-prev, .carrusel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carrusel-prev {
+    left: 10px;
+}
+
+.carrusel-next {
+    right: 10px;
+}
+
+.carrusel-prev:hover, .carrusel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+  /* Contenido principal */
+main {
+    padding: 20px;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Tarjetas de juego (usadas en index, catálogo, etc.) */
+.destacados, .catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Asegura que los elementos hijos posicionados funcionen correctamente */
+}
+
+/* CATALOGO - AJUSTES PARA 5 TARJETAS POR FILA Y ESPACIO PARA HOVER */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1600px; /* Ancho máximo para contener 5 tarjetas + espacios */
+    margin: 0 auto;
+    padding: 0 100px; /* Margen a los lados para el hover */
+}
+
+.tarjeta-juego {
+    position: relative;
+    width: calc(100% - 20px); /* Ajuste de ancho */
+    flex: 0 0 auto; /* Evita que las tarjetas se estiren */
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+/* Para pantallas grandes (5 tarjetas por fila) */
+@media (min-width: 1600px) {
+    .catalogo {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Ajuste para el hover */
+.tarjeta-juego:hover {
+    transform: scale(1.05);
+    z-index: 1000; /* Asegura que el hover esté por encima */
+}
+
+.tarjeta-juego .info-juego {
+    left: 110%; /* Más espacio a la derecha */
+    width: 350px; /* Ancho aumentado */
+    /* Mantener otros estilos del hover */
+}
+
+/* Asegurar que no haya overflow horizontal */
+body {
+    overflow-x: hidden;
+}
+
+.tarjeta-juego {
+    position: relative;
+    overflow: hidden; /* Mantenemos hidden por defecto */
+    background: #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.tarjeta-juego:hover {
+    transform: scale(1.05);
+    overflow: visible;
+    z-index: 1000; /* Asegura que la tarjeta hover esté por encima de las demás */
+}
+
+.tarjeta-juego img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.tarjeta-juego h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.tarjeta-juego p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tarjeta-juego button {
+    margin: 10px;
+    padding: 8px 12px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-juego button:hover {
+    background-color: #f0a500;
+}
+
+/* Estilos para el menú desplegable */
+.tarjeta-juego .info-juego {
+    color: #ff9800;
+    position: absolute;
+    top: 0;
+    left: 105%;
+    width: 300px;
+    background: rgba(29, 29, 29, 0.95);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.tarjeta-juego .info-juego p{
+    color: #e68900;
+    text-align: left;
+}
+
+.tarjeta-juego:hover .info-juego {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ajustes para el slider interno */
+.slider-hover {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.slider-hover img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider-hover img.active {
+    opacity: 1;
+}
+
+  /* Filtros de categorías */
+.filtros {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtros .btn-categoria {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filtros .btn-categoria:hover {
+    background: #f0a500;
+}
+
+.filtros .btn-consola {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filtros .btn-consola:hover {
+    background: #f0a500;
+}
+
+.btn-categoria.activo, .btn-consola.activo {
+    background-color: #f0a500;
+    color: white;
+}
+
+.filtros .btn-consola {
+    margin-top: -25px;
+}
+
+  /* Página de detalle del juego */
+.detalle-juego {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.detalle-juego img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.detalle-juego button {
+        margin: 10px;
+        padding: 10px 15px;
+        background-color: #222;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.detalle-juego button:hover {
+    background-color: #f0a500;
+    color: white;
+}
+
+.info-juego {
+    flex: 1;
+}
+
+.info-juego h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info-juego p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.trailer-container {
+    flex: 2;
+    margin: 20px auto;
+    max-width: 800px; /* Ajusta el tamaño máximo */
+    padding: 10px;
+    background: #111; /* Fondo oscuro para contraste */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.trailer-container iframe {
+    width: 100%;
+    height: 450px; /* Altura más grande */
+    border-radius: 10px;
+    border: none;
+}
+
+.calificacion {
+    text-align: center;
+    margin-top: 20px;
+}
+.estrellas i {
+    font-size: 2em;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+.estrellas i.seleccionada {
+    color: gold;
+}
+.puntuacion-metacritic {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+.score {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Estilos para elementos del carrito */
+.carrito button {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrito button:hover {
+    background-color: #f0a500;
+    color: white;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.item-carrito img.img-carrito {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.item-carrito h4 {
+    margin: 0 10px 0 0;
+}
+
+.item-carrito p {
+    margin: 0 10px;
+}  
+
+  /* Formularios (Contacto, etc.) */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario form {
+    max-width: 900px;
+    width: 100%; 
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.formulario form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="email"],
+.formulario form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulario form button[type="submit"] {
+    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario form button[type="submit"]:hover {
+    background: #f0a500;
+}
+
+  /* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: #ff9800;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+  /* Responsive */
+@media (max-width: 768px) {
+.navbar {
+    flex-direction: column;
+    }
+    
+.nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    }
+    
+.nav-links li {
+    margin: 10px 0;
+    }
+    
+.menu-hamburguesa {
+    display: flex;
+    }
+    
+.detalle-juego {
+    flex-direction: column;
+    align-items: center;
+    }
+} 
+
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+>>>>>>> a9e567e (Mejoras)
 }
