@@ -359,63 +359,134 @@ header ul {
     right: 10px;
 }
 
-.carrusel {
+/* Contenedor del carrusel estilo Steam */
+.steam-carousel {
     position: relative;
-    justify-content: center;
-    max-width: 40%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carrusel-contenedor {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carrusel-item {
-    min-width: 100%;
-    position: relative;
-}
-
-.carrusel-item img {
     width: 100%;
-    vertical-align: middle;
-}
-
-.carrusel-texto {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #c4c4c4;
     border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-.carrusel-prev, .carrusel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+/* Flechas */
+.arrow {
+    background: rgba(0,0,0,0.4);
     color: #fff;
     border: none;
-    padding: 10px;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
-.carrusel-prev {
-    left: 10px;
+.left {
+    margin-left: 10px;
 }
 
-.carrusel-next {
-    right: 10px;
+.right {
+    margin-right: 10px;
+    margin-left: auto; /* Empuja la flecha derecha al extremo */
 }
 
-.carrusel-prev:hover, .carrusel-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Sección Principal */
+.carousel-main {
+    position: relative;
+    flex: 1;
+    height: 400px;
+    margin: 0 10px;
+}
+
+#main-image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+  /* Overlay con información y precio */
+.info-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.info-overlay h2 {
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.info-overlay p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.price-box {
+    margin-top: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+.discount {
+    background-color: #ecc455;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #e68900;
+}
+
+/* Miniaturas (Thumbnails) */
+.carousel-thumbs {
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.thumb {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 3px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.thumb.active {
+    opacity: 1;
+    border: 2px solid #fff;
 }
 
   /* Contenido principal */
