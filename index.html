@@ -46,13 +46,13 @@
         <img src="IMG/slider1.jpg" alt="Juego 2">
     </div>
     <div class="slide">
-        <img src="IMG/sh2.jpg" alt="Juego 3">
+        <img src="IMG/i.png" alt="Juego 3">
     </div>
     <div class="slide">
-        <img src="IMG/slider2.jpg" alt="Juego 4">
+        <img src="IMG/ds3.jpg" alt="Juego 4">
     </div>
     <div class="slide">
-        <img src="IMG/rdr2.jpg" alt="Juego 5">
+        <img src="IMG/slider3.jpg" alt="Juego 5">
     </div>
     <button class="prev" id="prev">&#10094;</button>
     <button class="next" id="next">&#10095;</button>
@@ -60,7 +60,7 @@
 
 <!-- Juegos Destacados -->
 <main>
-    <h2>Juegos Destacados</h2>
+    <h2>Juegos Esperados...</h2>
     <br>
     <div class="destacados">
     <!-- Ejemplo de tarjeta de juego -->
@@ -76,40 +76,24 @@
         <p>Juego de acción y mundo abierto con modo multiplayer.</p>
         <a href="detalle-juego.html?id=10"><button>Ver Más</button></a>
     </article>
-    <article class="tarjeta-juego" data-categoria="terror" data-plataforma="playstation, pc" data-id="11">
-        <a href="detalle-juego.html?id=11"><img src="IMG/sh2.jpg" alt="Silent Hill 2"></a>
-        <h3>Silent Hill 2</h3>
-        <p>Clásico juego de terror con atmósfera inquietante.</p>
-        <a href="detalle-juego.html?id=11"><button>Ver Más</button></a>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="19">
+        <a href="detalle-juego.html?id=19"><img src="IMG/i.png" alt="Intergalatic The Heretic Prophet"></a>
+        <h3>Intergalatic The Heretic Prophet</h3>
+        <p>Juego de acción y ciencia ficción con narrativa única.</p>
+        <a href="detalle-juego.html?id=19"><button>Ver Más</button></a>
     </article>
-    <article class="tarjeta-juego" data-categoria="accion, multiplayer, free" data-plataforma="pc" data-id="3">
-        <a href="detalle-juego.html?id=3"><img src="IMG/cs2.jpg" alt="Counter Strike 2"></a>
-        <h3>Counter Strike 2</h3>
-        <p>Juego free to play de disparos.</p>
-        <a href="detalle-juego.html?id=3"><button>Ver Más</button></a>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="22">
+        <a href="detalle-juego.html?id=22"><img src="IMG/ds2.jpg" alt="Death Stranding 2"></a>
+        <h3>Death Stranding 2</h3>
+        <p>Juego de acción y aventura en un mundo post-apocalíptico.</p>
+        <a href="detalle-juego.html?id=22"><button>Ver Más</button></a>
     </article>
-    <article class="tarjeta-juego" data-categoria="accion, multiplayer" data-plataforma="playstation, pc, xbox, nintendo" data-id="6">
-        <a href="detalle-juego.html?id=6"><img src="IMG/rdr2.jpg" alt="Red Dead Redemption 2"></a>
-        <h3>Red Dead Redemption 2</h3>
-        <p>Juego de accion ambientado en el siglo XIX.</p>
-        <a href="detalle-juego.html?id=6"><button>Ver Más</button></a>
+    <article class="tarjeta-juego" data-categoria="accion" data-plataforma="playstation" data-id="21">
+        <a href="detalle-juego.html?id=21"><img src="IMG/mgsd.png" alt="Metal Gear Solid Delta"></a>
+        <h3>Metal Gear Solid Delta</h3>
+        <p>Juego de sigilo y acción con gran estrategia.</p>
+        <a href="detalle-juego.html?id=21"><button>Ver Más</button></a>
     </article>
-    </div>
-
-<!-- Filtros de categorías -->
-    <div class="filtros">
-        <button class="btn-categoria" data-categoria="accion">Acción</button>
-        <button class="btn-categoria" data-categoria="terror">Terror</button>
-        <button class="btn-categoria" data-categoria="free">Free</button>
-        <button class="btn-categoria" data-categoria="multiplayer">Multiplayer</button>
-    </div>
-
-    <!-- Filtros de plataformas (opcional) -->
-    <div class="filtros">
-        <button class="btn-consola" data-consola="playstation">PlayStation</button>
-        <button class="btn-consola" data-consola="xbox">Xbox</button>
-        <button class="btn-consola" data-consola="pc">PC</button>
-        <button class="btn-consola" data-consola="nintendo">Nintendo</button>
     </div>
 
     <h2>Juegos en Oferta</h2>
@@ -176,7 +160,6 @@
 <!-- Inclusión de scripts -->
     <script src="JS/main.js"></script>
     <script src="JS/slider.js"></script>
-    <script src="JS/filtrado.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const carruselContenedor = document.querySelector('.carrusel-contenedor');
