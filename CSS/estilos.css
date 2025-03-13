@@ -292,6 +292,98 @@ header ul {
     transform: translateX(200%);
 }
 
+.error-mensaje {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.exito-mensaje {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Estilos para la página de bienvenida */
+.bienvenido {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in;
+}
+
+.bienvenido h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenido p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bienvenido {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .bienvenido h1 {
+        font-size: 2rem;
+    }
+    
+    .bienvenido p {
+        font-size: 1rem;
+    }
+}
+
   /* Menú hamburguesa (móvil) */
 .menu-hamburguesa {
     display: none;

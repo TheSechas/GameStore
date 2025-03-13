@@ -1,3 +1,10 @@
+<?php
+session_start();
+$error = $_SESSION['error'] ?? '';
+$exito = $_SESSION['exito'] ?? '';
+unset($_SESSION['error']);
+unset($_SESSION['exito']);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,18 +39,22 @@
     </ul>
     <div class="user-menu">
         <div class="user-logo">
-            <a href="inicio.html"><i class="fa fa-user-circle"></i></a>
+            <a href="inicio.php"><i class="fa fa-user-circle"></i></a>
         </div>
     </div>
     </nav>
 </header>
 <section id="login-register">
-<?php if (isset($_GET["error"])): ?>
-    <p style="color: red;"><?php echo $_GET["error"]; ?></p>
+<?php if ($error): ?>
+<div class="error-mensaje">
+    <?php echo $error; ?>
+</div>
 <?php endif; ?>
 
-<?php if (isset($_GET["mensaje"])): ?>
-    <p style="color: green;"><?php echo $_GET["mensaje"]; ?></p>
+<?php if ($exito): ?>
+<div class="exito-mensaje">
+    <?php echo $exito; ?>
+</div>
 <?php endif; ?>
     <div class="container" id="container">
         <div class="form-container sign-up">
@@ -53,7 +64,7 @@
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
                 </div>
                 <span>O usa tu email para registrarte</span>
                 <input type="text" name="nombre" placeholder="Nombre" required>
@@ -69,7 +80,7 @@
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
                 </div>
                 <span>O usa tu email y tu contraseña</span>
                 <input type="email" name="login_email" placeholder="Email" required>

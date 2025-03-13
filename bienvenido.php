@@ -1,20 +1,26 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: inicio.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta los productos de tu carrito en GameStore y finaliza tu compra.">
-    <meta name="keywords" content="GameStore, carrito de compras, videojuegos, tienda gaming">
+    <meta name="description" content="GameStore - Tu tienda de videojuegos favorita con los últimos títulos y ofertas.">
+    <meta name="keywords" content="videojuegos, tienda, gaming, PS5, PC, Xbox">
     <meta name="author" content="GameStore Team">
     
-    <title>Carrito - GameStore</title>
+    <title>Bienvenido - GameStore</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/estilos.css">
     <link rel="icon" href="IMG/favicon.png" type="image/png">
 </head>
 <body>
-<!-- Header y menú -->
 <header>
     <nav class="navbar">
         <a href="index.html" class="logo">GameStore</a>
@@ -37,21 +43,24 @@
     </div>
     </nav>
 </header>
-<br>
-<br>    
-<main>
-    <section class="carrito">
-        <h1>Tu Carrito</h1>
-        <div id="contenido-carrito" class="carrito-contenedor"></div>
-        
-        <div class="botones-carrito">
-            <button id="vaciar-carrito" class="btn">Vaciar Carrito</button>
-            <button id="finalizar-compra" class="btn btn-comprar">Finalizar Compra</button>
-        </div>
+    <br>
+    <br>
+    <br>
+    <section class="bienvenido">
+        <h1>¡Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario']['nombre']); ?>!</h1>
+        <p>Has iniciado sesión correctamente en GameStore.</p>
+        <a href="logout.php">Cerrar sesión</a>
     </section>
-</main>
-
-<!-- Footer -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <footer>
     <div class="footer-container">
         <div class="footer-logo">
@@ -76,26 +85,5 @@
         <p class="footer-copy">&copy; 2025 GameZone - Todos los derechos reservados</p>
     </div>
 </footer>
-
-<!-- Scripts -->
-<script src="JS/main.js"></script>
-<script src="JS/carrito.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Obtener el botón de "Finalizar Compra"
-        const btnFinalizarCompra = document.getElementById('finalizar-compra');
-
-        // Añadir el evento de clic al botón
-        btnFinalizarCompra.addEventListener("click", () => {
-            // Aquí se puede mostrar el mensaje de "Compra Finalizada"
-            alert("Compra Finalizada");
-        });
-        // Funcionalidad de vaciar carrito
-        document.getElementById("vaciar-carrito").addEventListener("click", () => {
-            localStorage.removeItem("carrito");
-            mostrarCarrito();
-        });
-    });
-</script>
 </body>
 </html>
