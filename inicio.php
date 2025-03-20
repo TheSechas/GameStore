@@ -44,7 +44,8 @@ unset($_SESSION['exito']);
     </div>
     </nav>
 </header>
-<section id="login-register">
+<br>
+<br>
 <?php if ($error): ?>
 <div class="error-mensaje">
     <?php echo $error; ?>
@@ -56,6 +57,7 @@ unset($_SESSION['exito']);
     <?php echo $exito; ?>
 </div>
 <?php endif; ?>
+<section id="login-register">
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form action="PHP/register.php" method="POST">
